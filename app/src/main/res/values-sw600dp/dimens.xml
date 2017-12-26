@@ -1,0 +1,17 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">7dp</dimen>
+    <dimen name="activity_vertical_margin">7dp</dimen>
+    <dimen name="listitem_width">67dp</dimen>
+    <dimen name="listitem_text_padding">2dp</dimen>
+    <dimen name="listitem_spacing">3dp</dimen>
+    <dimen name="listitem_total_font_size">36dp</dimen>
+    <dimen name="listitem_suffix_font_size">22dp</dimen>
+    <dimen name="listitem_day_font_size">24dp</dimen>
+    <dimen name="player_button_horz_padding">18dp</dimen>
+    <dimen name="player_day_title">24dp</dimen>
+    <dimen name="player_song_title">28dp</dimen>
+    <dimen name="playlist_song_title">24dp</dimen>
+    <dimen name="file_selection_text_size">18dp</dimen>
+    <dimen name="file_selection_check_all_font_size">18dp</dimen>
+</resources>

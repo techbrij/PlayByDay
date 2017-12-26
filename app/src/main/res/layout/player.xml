@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#4a4a4a"
+android:orientation="vertical"
+>
+
+    <GridView
+        android:id="@+id/gridView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:verticalSpacing="@dimen/listitem_spacing"
+        android:horizontalSpacing="@dimen/listitem_spacing"
+        android:gravity="center"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        >
+    </GridView>
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <!-- Player Header -->
+        <RelativeLayout
+            android:id="@+id/player_header_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@layout/bg_player_header"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            >
+            <!-- Repeat Button -->
+            <ImageButton
+                android:id="@+id/btnRepeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_repeat"
+                android:background="@null"
+                android:layout_alignParentLeft="true"
+                />
+            <LinearLayout android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_toRightOf="@+id/btnRepeat"
+                android:layout_toLeftOf="@+id/btnShuffle"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                >
+            <!-- Song Title -->
+            <TextView
+                android:id="@+id/playListTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#eeeeee"
+                android:textSize="@dimen/player_day_title"
+                android:text=""
+                android:layout_marginTop="3dp"
+              />
+            <!-- Song Title -->
+            <TextView
+                android:id="@+id/songTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#eeeeee"
+                android:textSize="@dimen/player_song_title"
+                android:textStyle="bold"
+                android:text="The Good, The Bad And The Ugly  kdjksd jsdj end.mp3"
+                android:layout_marginTop="3dp"
+                android:paddingBottom="5dp"
+                android:maxLines="1"/>
+            </LinearLayout>
+            <!-- Shuffle Button -->
+            <ImageButton
+                android:id="@+id/btnShuffle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_shuffle"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="3dp"
+                android:background="@null"
+                />
+        </RelativeLayout>
+        <!-- Progress Bar/Seek bar -->
+        <SeekBar
+            android:id="@+id/songProgressBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:thumb="@drawable/seek_handler"
+            android:progressDrawable="@drawable/seekbar_progress"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="15dp"
+            />
+
+        <!-- Timer Display -->
+        <LinearLayout
+            android:id="@+id/timerDisplay"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal">
+            <!-- Current Duration Label -->
+            <TextView
+                android:id="@+id/songCurrentDurationLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="0:00"
+                android:textColor="#8AC247"
+                android:textStyle="bold"/>
+            <!-- Total Duration Label -->
+            <TextView
+                android:id="@+id/songTotalDurationLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text=""
+                android:textColor="#eeeeee"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Player Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:background="@layout/bg_player_footer"
+
+            >
+            <!-- Previous Button -->
+            <ImageButton
+                android:id="@+id/btnPrevious"
+                android:src="@drawable/btn_previous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:paddingLeft="@dimen/player_button_horz_padding"
+                android:paddingRight="@dimen/player_button_horz_padding"
+                />
+            <!-- Backward Button -->
+            <ImageButton
+                android:id="@+id/btnBackward"
+                android:src="@drawable/btn_backward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/player_button_horz_padding"
+                android:paddingRight="@dimen/player_button_horz_padding"
+                android:background="@null"/>
+            <!-- Play Button -->
+            <ImageButton
+                android:id="@+id/btnPlay"
+                android:src="@drawable/btn_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:paddingLeft="@dimen/player_button_horz_padding"
+                android:paddingRight="@dimen/player_button_horz_padding"
+                />
+            <!-- Forward Button -->
+            <ImageButton
+                android:id="@+id/btnForward"
+                android:src="@drawable/btn_forward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:paddingLeft="@dimen/player_button_horz_padding"
+                android:paddingRight="@dimen/player_button_horz_padding"
+                />
+            <!-- Next Button -->
+            <ImageButton
+                android:id="@+id/btnNext"
+                android:src="@drawable/btn_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:paddingLeft="@dimen/player_button_horz_padding"
+                android:paddingRight="@dimen/player_button_horz_padding"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

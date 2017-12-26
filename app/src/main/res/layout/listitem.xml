@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/ListItemTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="15"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/black"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/listitem_total_font_size"
+        android:paddingTop="@dimen/listitem_text_padding"
+        android:paddingBottom="@dimen/listitem_text_padding"
+        android:textStyle="bold"
+
+        />
+    <TextView
+        android:id="@+id/ListItemSuffix"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="songs"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/black"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/listitem_suffix_font_size"
+        android:paddingBottom="@dimen/listitem_text_padding"
+        />
+    <TextView
+        android:id="@+id/ListItemTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:background="@layout/bg_player_footer"
+        android:textColor="@android:color/white"
+        android:paddingTop="@dimen/listitem_text_padding"
+        android:paddingBottom="@dimen/listitem_text_padding"
+        android:textSize="@dimen/listitem_day_font_size"
+        android:text="Sunday"
+        />
+</LinearLayout>
